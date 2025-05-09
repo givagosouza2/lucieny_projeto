@@ -153,14 +153,14 @@ with tab2:
             ax.plot(tempo, desl_x)
             ax.set_xlabel('Tempo')
             ax.set_ylabel("Desl ML")
-            ax.set_aspect('equal')
+            
             st.pyplot(fig)
 
             fig, ax = plt.subplots()
             ax.plot(tempo, desl_y)
             ax.set_xlabel('Tempo')
             ax.set_ylabel("Desl AP")
-            ax.set_aspect('equal')
+            
             st.pyplot(fig)
             
             deslocamento_total = np.sum(np.sqrt(desl_x**2 + desl_y**2))
