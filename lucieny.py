@@ -78,8 +78,7 @@ with tab1:
                 acc_z_interpolated, cutoff=cutoff, fs=fs)
 
             fig, ax = plt.subplots()
-            ax.plot(tempo_interp, acc_x_processed)
-            ax.plot(tempo_interp, acc_z_processed)
+            
             ax.plot(acc_x_processed[1500:7500], acc_z_processed[1500:7500])
             ax.set_xlabel('Acc ML')
             ax.set_ylabel("Acc AP")
