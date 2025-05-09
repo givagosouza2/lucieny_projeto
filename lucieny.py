@@ -159,7 +159,7 @@ with tab2:
             fig, ax = plt.subplots()
             ax.plot(tempo, desl_y)
             ax.set_xlabel('Tempo')
-            ax.set_ylabel("Desl ML")
+            ax.set_ylabel("Desl AP")
             ax.set_aspect('equal')
             st.pyplot(fig)
             
