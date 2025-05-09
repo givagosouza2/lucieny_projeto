@@ -78,11 +78,27 @@ with tab1:
                 acc_z_interpolated, cutoff=cutoff, fs=fs)
 
             fig, ax = plt.subplots()
+            ax.plot(tempo_interp, acc_x_processed)
+            ax.plot(tempo_interp, acc_z_processed)
             ax.plot(acc_x_processed[1500:7500], acc_z_processed[1500:7500])
             ax.set_xlabel('Acc ML')
             ax.set_ylabel("Acc AP")
             ax.set_xlim([-10, 10])
             ax.set_ylim([-10, 10])
+            ax.set_aspect('equal')
+            st.pyplot(fig)
+            
+            fig, ax = plt.subplots()
+            ax.plot(tempo_interp, acc_x_processed)
+            ax.set_xlabel('Tempo')
+            ax.set_ylabel("Acc ML")
+            ax.set_aspect('equal')
+            st.pyplot(fig)
+
+            fig, ax = plt.subplots()
+            ax.plot(tempo_interp, acc_z_processed)
+            ax.set_xlabel('Tempo')
+            ax.set_ylabel("Acc ML")
             ax.set_aspect('equal')
             st.pyplot(fig)
 
@@ -134,6 +150,20 @@ with tab2:
             ax.set_aspect('equal')
             st.pyplot(fig)
 
+            fig, ax = plt.subplots()
+            ax.plot(tempo, desl_x)
+            ax.set_xlabel('Tempo')
+            ax.set_ylabel("Desl ML")
+            ax.set_aspect('equal')
+            st.pyplot(fig)
+
+            fig, ax = plt.subplots()
+            ax.plot(tempo, desl_y)
+            ax.set_xlabel('Tempo')
+            ax.set_ylabel("Desl ML")
+            ax.set_aspect('equal')
+            st.pyplot(fig)
+            
             deslocamento_total = np.sum(np.sqrt(desl_x**2 + desl_y**2))
 
             st.write(deslocamento_total)
